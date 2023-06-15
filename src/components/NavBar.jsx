@@ -20,8 +20,8 @@ export const NavBar = () => {
         }
     }
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
-            <div className="container-fluid">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light mb-4">
+            <div className="container">
                 <span className="navbar-brand" style={{ 'color': '#3c3c3c', 'fontWeight': '600' }}>Countries</span>
                 <button id="nav-bar-toogle-button" className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

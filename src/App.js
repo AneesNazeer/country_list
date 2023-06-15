@@ -21,7 +21,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="container">
+    <div className="container custom-container">
       <Routes>
         <Route element={<Signin />} exact path="/"></Route>
         <Route element={<Country />} path="/Country/*"></Route>

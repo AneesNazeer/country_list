@@ -13,7 +13,7 @@ import { Footer } from '../Footer'
 export const Country = () => {
     return (
         <>
-            <div className="content">
+            <div className="content" style={{ 'paddingTop': '100px' }}>
                 <NavBar />
                 <Routes>
                     <Route element={<All />} path="/All"></Route>
