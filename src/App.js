@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Route, Routes } from "react-router-dom";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addCountry } from "./redux/country/countrySlice";
+import { useEffect } from "react";
+import { Signin } from "./pages/Signin";
+import { Country } from "./pages/country/Country";
 
 function App() {
+  let dispatch = useDispatch();
+
+  useEffect(() => {
+    axios
+      .get("https://restcountries.com/v2/all?fields=name,region,flag")
+      .then((res) => {
+        dispatch(addCountry(res.data));
+      });
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Routes>
+        <Route element={<Signin />} exact path="/"></Route>
+        <Route element={<Country />} path="/Country/*"></Route>
+      </Routes>
     </div>
   );
 }

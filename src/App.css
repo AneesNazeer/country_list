@@ -1,38 +1,104 @@
-.App {
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  flex-shrink: 0;
+  transform: scale(0.8);
+}
+
+.navbar-toggler {
+  border-radius: 0px !important;
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.nav-link {
+  color: #8B8B8B !important;
+  transition: all 0.2s;
+  font-weight: 600 !important;
+}
+
+.nav-link.active {
+  color: #3c3c3c !important;
+  border-bottom: 3px solid #3c3c3c;
+}
+
+.custom-style-input-box {
+  border-radius: 0px !important;
+  border: 2px solid #3c3c3c !important;
+  box-shadow: none !important;
+  height: 48px !important;
+}
+
+.custom-style-input-box::placeholder {
+  color: #3c3c3c !important;
+  font-weight: bolder;
+}
+
+.custom-style-check-box {
+  transform: scale(1.8) !important;
+  border-radius: 0px !important;
+  border: 1px solid #3c3c3c !important;
+  box-shadow: none !important;
+
+}
+
+.custom-style-check-box:checked {
+  background-color: white !important;
+  border-color: #3c3c3c !important;
+  color: #3c3c3c !important;
+}
+
+.custom-style-check-box:checked {
+  background-image: url('../public/Tick.svg') !important;
+}
+
+.new-button {
+  background-color: #3C3C3C !important;
+  border: 2px solid #3c3c3c !important;
+  color: white !important;
+  font-weight: 500 !important;
+  border-radius: 0px !important;
+}
+
+.new-button:hover {
+  background-color: white !important;
+  color: #3C3C3C !important;
+  border: 2px solid #3c3c3c !important;
+}
+
+.divider-line {
+  overflow: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider-line:before,
+.divider-line:after {
+  background-color: #CFCFCF;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.divider-line:before {
+  right: 0.5em;
+  margin-left: -50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider-line:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
