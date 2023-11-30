@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { InputBox } from "../components/InputBox";
 import { CheckBox } from "../components/CheckBox";
 import { Button } from "../components/Button";
@@ -6,10 +6,14 @@ import { Google } from "../components/Google";
 import { Facebook } from "../components/Facebook";
 import { Linkedin } from "../components/Linkedin";
 import { Twitter } from "../components/Twitter";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ButtonLoadingDisabled } from "../components/ButtonLoadingDisabled";
 
 export const Signin = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/country_list", { replace: true });
+  }, []);
   const [loading, setLoading] = useState(false);
   return (
     <div className="row" style={{ height: "100dvh" }}>
