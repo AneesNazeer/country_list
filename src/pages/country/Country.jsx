@@ -16,6 +16,7 @@ export const Country = () => {
             <div className="content" style={{ 'paddingTop': '100px' }}>
                 <NavBar />
                 <Routes>
+                    <Route element={<All />} path="/"></Route>
                     <Route element={<All />} path="/All"></Route>
                     <Route element={<Asia />} path="/Asia"></Route>
                     <Route element={<Europe />} path="/Europe"></Route>
