@@ -24,8 +24,7 @@ function App() {
     <div className="container custom-container">
       <Routes>
         {/* <Route element={<Signin />} path="/"></Route> */}
-        {/* <Route element={<Signin />} path="/country_list"></Route> */}
-        <Route element={<Country />} path="/country_list/*"></Route>
+        <Route element={<Country />} path="/*"></Route>
       </Routes>
     </div>
   );

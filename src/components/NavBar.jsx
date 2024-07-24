@@ -29,22 +29,22 @@ export const NavBar = () => {
                 <div className="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
                         <li className="nav-item">
-                            <Link to="/country_list/All" className={currentURL === '/country_list/All' ? 'nav-link active' : 'nav-link'} aria-current="page" onClick={() => { setCurrentURL('/country_list/All'); navautoclose() }}>All</Link>
+                            <Link to="/All" className={currentURL === '/All' ? 'nav-link active' : 'nav-link'} aria-current="page" onClick={() => { setCurrentURL('/All'); navautoclose() }}>All</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/country_list/Asia" className={currentURL === '/country_list/Asia' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/country_list/Asia'); navautoclose() }}>Asia</Link>
+                            <Link to="/Asia" className={currentURL === '/Asia' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/Asia'); navautoclose() }}>Asia</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/country_list/Africa" className={currentURL === '/country_list/Africa' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/country_list/Africa'); navautoclose() }}>Africa</Link>
+                            <Link to="/Africa" className={currentURL === '/Africa' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/Africa'); navautoclose() }}>Africa</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/country_list/Americas" className={currentURL === '/country_list/Americas' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/country_list/Americas'); navautoclose() }}>Americas</Link>
+                            <Link to="/Americas" className={currentURL === '/Americas' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/Americas'); navautoclose() }}>Americas</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/country_list/Oceania" className={currentURL === '/country_list/Oceania' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/country_list/Oceania'); navautoclose() }}>Oceania</Link>
+                            <Link to="/Oceania" className={currentURL === '/Oceania' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/Oceania'); navautoclose() }}>Oceania</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/country_list/Other" className={currentURL === '/country_list/Other' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/country_list/Other'); navautoclose() }}>Other</Link>
+                            <Link to="/Other" className={currentURL === '/Other' ? 'nav-link active' : 'nav-link'} onClick={() => { setCurrentURL('/Other'); navautoclose() }}>Other</Link>
                         </li>
                     </ul>
                 </div>
