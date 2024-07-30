@@ -7,11 +7,6 @@ export const All = () => {
     return (
 
         <div className='row g-3'>
-            <button onClick={() => {
-                if (window.Pay) {
-                    window.Pay.postMessage("success");
-                }
-            }}>close</button>
             {country.map((element, index) => {
                 return <CountryCard value={element} key={index + element.name + index} />
             })}
